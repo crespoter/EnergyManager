@@ -1,0 +1,215 @@
+timestamp: 2016-09-14T05:49:55.738000
+CREATE TABLE auth_user(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name CHAR(128),
+    last_name CHAR(128),
+    email CHAR(512),
+    password CHAR(512),
+    registration_key CHAR(512),
+    reset_password_key CHAR(512),
+    registration_id CHAR(512)
+);
+success!
+timestamp: 2016-09-14T05:49:55.841000
+CREATE TABLE auth_group(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    role CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2016-09-14T05:49:55.920000
+CREATE TABLE auth_membership(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  ,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE  
+);
+success!
+timestamp: 2016-09-14T05:49:55.987000
+CREATE TABLE auth_permission(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE  ,
+    name CHAR(512),
+    table_name CHAR(512),
+    record_id INTEGER
+);
+success!
+timestamp: 2016-09-14T05:49:56.064000
+CREATE TABLE auth_event(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    time_stamp TIMESTAMP,
+    client_ip CHAR(512),
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  ,
+    origin CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2016-09-14T05:49:56.143000
+CREATE TABLE auth_cas(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  ,
+    created_on TIMESTAMP,
+    service CHAR(512),
+    ticket CHAR(512),
+    renew CHAR(1)
+);
+success!
+timestamp: 2016-09-14T06:08:34.012000
+CREATE TABLE users(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    device_id CHAR(512),
+    energyConsumed INTEGER,
+    device_password CHAR(512),
+    date_of_measure DATE
+);
+success!
+timestamp: 2016-09-14T06:16:04.269000
+CREATE TABLE devices(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES users (id) ON DELETE CASCADE  
+);
+success!
+timestamp: 2016-09-14T06:27:26.807000
+ALTER TABLE devices ADD energyconsumed INTEGER;
+timestamp: 2016-09-14T06:27:26.915000
+ALTER TABLE devices ADD device_id CHAR(512);
+timestamp: 2016-09-14T06:27:26.970000
+ALTER TABLE devices ADD device_password CHAR(512);
+timestamp: 2016-09-14T06:27:27.048000
+ALTER TABLE devices ADD date_of_measure DATE;
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+timestamp: 2016-09-14T06:36:49.834000
+ALTER TABLE users ADD city CHAR(512);
+timestamp: 2016-09-14T06:36:49.952000
+ALTER TABLE users ADD name CHAR(512);
+timestamp: 2016-09-14T06:36:50.029000
+ALTER TABLE users ADD addressline2 CHAR(512);
+timestamp: 2016-09-14T06:36:50.154000
+ALTER TABLE users ADD addressline3 CHAR(512);
+timestamp: 2016-09-14T06:36:50.240000
+ALTER TABLE users ADD addressline1 CHAR(512);
+timestamp: 2016-09-14T06:36:50.340000
+ALTER TABLE users ADD phonenumber CHAR(512);
+timestamp: 2016-09-14T06:36:50.417000
+ALTER TABLE users ADD password CHAR(512);
+success!
+success!
+success!
+success!
+timestamp: 2016-09-14T06:37:08.544000
+ALTER TABLE users ADD provice CHAR(512);
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+timestamp: 2016-09-14T06:49:46.266000
+CREATE TABLE consumption(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES users (id) ON DELETE CASCADE  ,
+    dateOfMeasure DATE,
+    timeOfMeasure TIME,
+    powerConsumed INTEGER
+);
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+timestamp: 2016-09-14T06:58:55.851000
+ALTER TABLE users ADD username CHAR(512);
+success!
+success!
+success!
+success!
+success!
+timestamp: 2016-09-14T06:59:23.022000
+CREATE TABLE administration(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username CHAR(512),
+    password CHAR(512)
+);
+success!
+success!
+success!
+success!
+success!
