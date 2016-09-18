@@ -1,0 +1,173 @@
+<html>
+	<head>
+		<titlle>
+			
+		</titlle>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>	
+		
+		<style>
+			
+			body {
+				margin:0;
+				padding:0;
+				height:100%;
+			}
+			#wrapper {
+				min-height:100%;
+				position:relative;
+			}
+			#header {
+				background:#ededed;
+				padding:10px;
+			}
+			#content {
+				padding-bottom:100px; /* Height of the footer element */
+			}
+			#footer {
+				background-color:black;
+				color:white;
+				width:100%;
+				height:100px;
+				position:absolute;
+				bottom:0;
+				left:0;
+			}
+				
+		</style>
+		
+		
+	</head>
+	
+	<body>
+		<div id ="wrapper">
+			<div id = "content">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html">
+							Welcome to ZAP! - Your Energy Saver 
+							<span class="glyphicon glyphicon-fire"></span>
+						</a>
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li> 
+							<a href="signup.html">
+								<span class="glyphicon glyphicon-user"></span>Sign Up
+							</a>
+						</li>
+						<li>
+								<a  data-toggle="modal" href="#myModal">
+								<span class="glyphicon glyphicon-log-in"  ></span>Login
+								</a>
+								<div id="myModal" class="modal fade" role="dialog">
+									<div class="modal-dialog modal-default">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal">x</button>
+													<h4 class="modal-title">LOGIN</h4>
+											</div>
+											<div class="modal-body">
+												<p>
+													Don't have an Account?
+												<a href = "register.html">Register</a>
+												</p>
+												<form method="post" action=" "  role="form">
+													<div class="form-group">
+														<label for="exampleIputEmail"></label>
+														<input type="email" class="form-control" id="user_email" name = "email" placeholder="E-mail">
+													</div>
+													<div class="form-group">
+														<label for="emailInputEmail"></label>
+														<input type="password" class="form-control" id = "user_password" name = "password" placeholder="Password">
+													</div>
+													<input type="submit" class="btn btn-success btn-send" value="Login" >
+													<a href="forgotpass.html">Forgot Password?</a>
+												</form>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+						</li>
+						<li>
+							<a href = "about.html" >
+								<span class="glyphicon glyphicon-tasks"></span>About Us
+							</a>
+						</li>
+						<li>
+							<a href = "contact.html" >
+							
+							<div class="form-group">
+								<input type="email" class="form-control" id= "email" name = "email" placeholder="E-mail" required>
+							</div>
+							
+							<div class="form-group">
+								<input type="password" class="form-control" id = "password" name = "password" placeholder="Password" required>
+							</div>
+							
+							<div class="form-group">
+								<input type="text" class="form-control" id= "contact" name = "contact" placeholder="Contact" required>
+							</div>
+							
+							<div class="form-group">
+								<input type="text" class="form-control" id = "city" name = "city" placeholder="City" required>
+							</div>
+							
+							<div class="form-group">
+								<input type="text" class="form-control" id = "address" name = "address" placeholder="Address" required>
+							</div>
+							
+							<input type="submit" class="btn btn-success btn-send" value="Sign Up"><br>
+
+						</form>
+						
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			<div id = "footer" align = center>
+			
+			
+				<div class="row" >
+					
+					<div class="col-md-4" >
+						
+						<h3>Information</h3>
+						<a style = "color:white" href="about.html">About Us</a><br/>
+						<a style = "color:white" href="contact.html">Contact Us</a>
+					</div>
+					<div class="col-md-4" >
+						<h3>My Account</h3>
+						<a  data-toggle="modal" href="#myModal" style="color:white" >Login</a><br/>
+						<a style = "color:white" href="signup.html">Sign Up</a>
+					</div>
+					<div class="col-md-4" >
+						<h3>Contact Us</h3>
+						Contact: +91-123-456789
+					</div>
+			
+				</div>
+			</div>
+			
+				
+			
+			
+			
+		</div>
+	</div>
+	</body>

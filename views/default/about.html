@@ -1,0 +1,199 @@
+<html>
+	<head>
+		<titlle>
+			
+		</titlle>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>	
+		
+		<style>
+			
+			body {
+				margin:0px;
+				padding:0;
+				height:100%;
+			}
+			#wrapper {
+				min-height:100%;
+				position:relative;
+			}
+			#header {
+				
+				padding:10px;
+			}
+			#content {
+				padding-bottom:120px; /* Height of the footer element */
+				
+			}
+			#footer {
+				
+				background-color:black;
+				color:white;
+				width:100%;
+				height:100px;
+				position:absolute;
+				bottom:0;
+				left:0;
+			}
+				
+		</style>
+		
+		
+	</head>
+	
+	<body>
+		<div id ="wrapper">
+			<div id = "content">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html">
+							Welcome to ZAP! - Your Energy Saver 
+							<span class="glyphicon glyphicon-fire"></span>
+						</a>
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li> 
+							<a href="signup.html">
+								<span class="glyphicon glyphicon-user"></span>Sign Up
+							</a>
+						</li>
+						<li>
+								<a  data-toggle="modal" href="#myModal">
+								<span class="glyphicon glyphicon-log-in"  ></span>Login
+								</a>
+								<div id="myModal" class="modal fade" role="dialog">
+									<div class="modal-dialog modal-default">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal">x</button>
+													<h4 class="modal-title">LOGIN</h4>
+											</div>
+											<div class="modal-body">
+												<p>
+													Don't have an Account?
+												<a href = "register.html">Register</a>
+												</p>
+												<form method="post" action=""  role="form">
+													<div class="form-group">
+														<label for="exampleIputEmail"></label>
+														<input type="email" class="form-control" id="user_email" name = "email" placeholder="E-mail">
+													</div>
+													<div class="form-group">
+														<label for="emailInputEmail"></label>
+														<input type="password" class="form-control" id = "user_password" name = "password" placeholder="Password">
+													</div>
+													<input type="submit" class="btn btn-success btn-send" value="Login" >
+													<a href="forgotpass.html">Forgot Password?</a>
+												</form>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+						</li>
+						<li>
+							<a href = "about.html" >
+								<span class="glyphicon glyphicon-tasks"></span>About Us
+							</a>
+						</li>
+						<li>
+							<a href = "contact.html" >
+								<span class="glyphicon glyphicon-phone"></span>Contact Us
+							</a>
+						</li>
+					</ul>
+					</div>
+				</div>
+			</nav>
+			
+			<div class="container">
+				<div class="row" >
+					<div class="col-md-4" >
+						<div class="panel panel-default">
+						<div class="panel-body">
+							<h4>About Us</h4>
+							<img  src="../static/images/group.png" valign="middle" height = "200px" width="200px" >
+							<p>
+								E-store is one of the leading e-commerce companys in India.
+								E-store was started by Akhil and Nikhil in 2010 and 
+								within 5 years company has become the leading e-commerce player of Indian market.
+								E-store started with online booking stores and later on it has added gadgets, electron items and apparels.
+								In these 5 years E-store is able to build bond of trust among buyers 
+								and because of this E-store has achieved stunning growth.
+							</p>
+						</div>
+						</div>
+					</div>
+					<div class="col-md-4" >
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<h4>Our History</h4>
+								<b>2010-</b><br>
+								The company was founded in 2010.In just four months of operation,
+								estore.com became a very popular site on the Web, making high marks on several Internet rankings.
+								It generated recognition as the sixth best site on Point Communications' "top ten" list, and
+								was almost immediately placed on Yahoo's "what's cool list" and Netscape's "what's new list."
+								<br>
+								<b>2014-</b><br>
+								As estore.com ventured into 2014, the company continued to grow.
+								By February, the Associates program had reached 30,000 members,
+								who now earned up to 15 percent for recommending and selling books from their web sites.
+								<br>
+								<b>2016-</b><br>
+								 In 2016, sales grew to $3.12 billion, an increase of 13 percent over the previous year.
+								 During the fourth quarter, estore.com reached a milestone that many had regarded as unlikely;
+								 it secured a net profit of $5 million.
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<h4>Opportunities</h4>
+								<b>Available Roles</b>
+								1.Jr./Sr. Web Developer [Full Time Role + also 
+								availabe as a 2 Months Internship]<br>
+								2.Business Appewntice[2 Months Internship]
+								3.Manager at backend operations [Full Time Role
+								+ also available as a 2 Month Internship]
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div id = "footer" align = center>
+				<div class="row" >
+					<div class="col-md-4" >
+						<h3>Information</h3>
+						<a style = "color:white" href="about.html">About Us</a><br/>
+						<a style = "color:white" href="contact.html">Contact Us</a>
+					</div>
+					<div class="col-md-4" >
+						<h3>My Account</h3>
+						<a  data-toggle="modal" href="#myModal" style="color:white" >Login</a><br/>
+						<a style = "color:white" href="signup.html">Sign Up</a>
+					</div>
+					<div class="col-md-4" >
+						<h3>Contact Us</h3>
+						Contact: +91-123-456789
+					</div>
+			
+				</div>
+			</div>
+			
+				
+			
+			
+			
+		</div>	
+	</body>
+	

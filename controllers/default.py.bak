@@ -1,6 +1,5 @@
 import datetime
 def update():
-    #v1.1
     sysTime=str(datetime.datetime.now())
     date=sysTime.split(' ')[0]
     time=sysTime.split(' ')[1].split('.')[0]

@@ -136,10 +136,11 @@ db.define_table("devices",
                 Field('user_id'),
                 Field('energyConsumed','integer'),
                 Field('device_password','password'),
-                Field('date_of_measure','date')
+                Field('date_of_measure','date'),
+                Field('time_of_measure','time')
                 );
 db.define_table("users",
-                Field('device_id','reference devices'),#Reference users , unsolved 
+                Field('device_id','reference devices'),
                 Field('name'),
                 Field('username'),
                 Field('password','password'),
@@ -150,6 +151,9 @@ db.define_table("users",
                 Field('provice'),
                 Field('phoneNumber')
                 );
+db.devices.user_id.type="reference users"
+
+
 db.define_table("consumption",
                 Field("user_id",'reference users'),
                 Field("dateOfMeasure",'date'),
@@ -158,4 +162,23 @@ db.define_table("consumption",
 db.define_table("administration",
                 Field('username'),
                 Field('password','password')
+                );
+db.define_table("messages",
+                Field('contactNumber'),
+                Field('contactName'),
+                Field('contactemail'),
+                Field('contactMessage'),
+                Field('readCondition','boolean')
+               );
+db.define_table('requests',
+                Field('name'),
+                Field('username'),
+                Field('password','password'),
+                Field('addressline1'),
+                Field('addressline2'),
+                Field('addressline3'),
+                Field('city'),
+                Field('provice'),
+                Field('phoneNumber'),
+                Field('requestPending','boolean')
                 );

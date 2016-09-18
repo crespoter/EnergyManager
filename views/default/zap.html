@@ -1,0 +1,253 @@
+<DOCTYPE! HTML>
+<html>
+	<head>
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+		<titlle>
+			
+		</titlle>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>	
+		
+            
+        
+        
+        
+        
+		<style>
+			body
+            {
+                background-image:url("zbg1.jpg");
+                background-repeat:no-repeat;background-size:100%;
+            }
+			
+			#wrapper {
+				min-height:100%;
+				position:relative;
+			}
+			#header {
+				background:#ededed;
+				padding:10px;
+			}
+			#content {
+				padding-bottom:100px; /* Height of the footer element */
+                
+			}
+			#footer {
+				background-color:black;
+				color:white;
+				width:100%;
+				height:100px;
+				position:absolute;
+				bottom:0;
+				left:0;
+			}
+            .center {
+                padding: 300px 0;
+            }
+            .navbar .nav > li > a, .navbar .nav > li > a:first-letter,
+.navbar .nav > li.current-menu-item > a, 
+.navbar .nav > li.current-menu-ancestor > a {
+display:        inline;
+font-family:    Garamond;
+font-size:      3em;
+padding:        5px 20px;
+}
+		</style>
+		
+
+		
+	</head>
+    
+	<body >
+		<div id ="wrapper">
+			<div id = "content">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+                        <a class="navbar-brand" href="#"><font size="5">ZAP</font></a>
+					</div>
+                   	<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li> 
+							<a href="#">
+								<span class="glyphicon glyphicon-fire"></span> Your Energy Saver 
+							</a>
+						</li>
+					</ul>
+					</div>
+				</div>
+			</nav>
+            <div class="row">
+                <div class="col-lg-3">
+                </div>
+                <div class="col-lg-6" align="center">
+                    <h1 style="color:orange	;">Welcome to ZAP</h1>
+                    <h2 style="color:blue;">Conserve Energy To Light Up Millions Of Homes</h2>
+                </div>
+                <div class="col-lg-3">
+                </div>
+                <div class="center">
+			<div class="container-fluid">
+				<div class="row">
+					
+					<div class="col-md-4" align = "center">
+					
+						<div class = "mysize">
+                            <button style="width:400px;height:35px"type="button1" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal"><span align="center"><font size="4">ADMIN LOGIN</font></button>
+                            <div id="myModal" class="modal fade" role="dialog">
+									<div class="modal-dialog modal-default">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal">x</button>
+													<h4 class="modal-title">CREATE A CONTACT</h4>
+											</div>
+											<div class="modal-body">
+												<form  action="create"  role="form">
+													<div class="form-group">
+														<label for="exampleIputEmail"></label>
+														<input type="text" class="form-control" id="user_name" name="name" placeholder="Name" required="true">
+													</div>
+													<div class="form-group">
+														<label for="emailInputEmail"></label>
+														<input type="text" class="form-control" id = "user_phone_no" name="Phone_number" placeholder="Phone No." required="true">
+													</div>
+													<input type="submit" class="btn btn-success btn-send" value="Submit" >
+												</form>
+											</div>
+										</div>
+									</div>
+                            </div>
+                        </div>
+					
+					</div>
+				    <div class="col-md-4" align = "center">
+						
+						<div class = "mysize">
+                            <button style="width:400px;height:35px"type="button1" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal2"><span align="center"><font size="4">USER LOGIN</font></button>
+						</div>
+                        <div id="myModal2" class="modal fade" role="dialog">
+									<div class="modal-dialog modal-default">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal">x</button>
+													<h4 class="modal-title">SEARCH FOR A CONTACT</h4>
+											</div>
+											<div class="modal-body">
+												<form method="post" action="read"  role="form">
+													<div class="form-group">
+														<label for="exampleIputEmail"></label>
+														<input type="text" class="form-control" id="user_name"  name="name" placeholder="Name">
+													</div>
+													
+													<input type="submit" class="btn btn-success btn-send" value="Submit" >
+												</form>
+											</div>
+										</div>
+									</div>
+                         </div>
+						
+					</div>
+					<div class="col-md-4" align = "center">
+						<div class = "mysize">
+								<button style="width:400px;height:35px"type="button1" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal3"><span align="center"><font size="4">NEW CONNECTION</font></button>
+						</div>
+                        <div id="myModal3" class="modal fade" role="dialog">
+									<div class="modal-dialog modal-default">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal">x</button>
+													<h4 class="modal-title">UPDATE A CONTACT</h4>
+											</div>
+											<div class="modal-body">
+												<form method="post" action="update"  role="form">
+													<div class="form-group">
+														<label for="exampleIputEmail"></label>
+														<input type="text" class="form-control" id="user_name"  name="name" placeholder="Name">
+													</div>
+													<div class="form-group">
+														<label for="emailInputEmail"></label>
+														<input type="text" class="form-control" id = "user_phone_no" name="Phone_number" placeholder="Phone No.">
+													</div>
+													<input type="submit" class="btn btn-success btn-send" value="Submit" >
+												</form>
+											</div>
+										</div>
+									</div>
+                         </div>    
+					</div>
+					<!--
+					<div class="col-md-3" align = "center">
+						
+						<div class = "mysize">
+								<button style="width:400px;height:35px"type="button1" class="btn btn-danger btn-md" data-toggle="modal" data-target="#myModal4"><span align="center"><font size="4">DELETE</font></button>
+						</div>
+                        <div id="myModal4" class="modal fade" role="dialog">
+									<div class="modal-dialog modal-default">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal">x</button>
+													<h4 class="modal-title">DELETE A CONTACT</h4>
+											</div>
+											<div class="modal-body">
+												<form method="post" action="delete"  role="form">
+													<div class="form-group">
+														<label for="exampleIputEmail"></label>
+														<input type="text" class="form-control" id="user_name"  name="name" placeholder="Name">
+													</div>
+													
+													<input type="submit" class="btn btn-success btn-send" value="Submit" >
+												</form>
+											</div>
+										</div>
+									</div>
+                         </div>
+						-->
+					</div>
+				</div>
+			</div>
+            </div
+                           
+            </div>
+            <div id = "footer" align = center>
+			
+			
+				<div class="row" >
+					
+					<div class="col-md-4" >
+						
+						<h3>Information</h3>
+						<a style = "color:white" href="#">About</a><br/>
+						<a style = "color:white" href="#">Utilities</a>
+					</div>
+					<div class="col-md-4" >
+						<h3>My Account</h3>
+						<a  data-toggle="modal" href="#" style="color:white" >Login</a><br/>
+						<a style = "color:white" href="#">Sign Up</a>
+					</div>
+					<div class="col-md-4" >
+						<h3>Contact Us</h3>
+						Contact: +91-123-456789
+					</div>
+			
+				</div>
+			</div>
+			
+				
+			
+			
+			
+		</div>
+        <link rel="javascript"src="js/jquery.js">
+        <link rel="javascript" src="js/jquery.min.js">
+	</body>
