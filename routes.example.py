@@ -17,7 +17,7 @@
 # 2. rename this APP/routes.example.py to APP/routes.py (where APP - is your application directory)
 # 3. restart web2py (or reload routes in web2py admin interface)
 #
-# YOU CAN COPY THIS FILE TO ANY APPLICATION'S ROOT DIRECTORY WITHOUT CHANGES!
+# Note: YOU CAN COPY THIS FILE TO ANY APPLICATION'S ROOT DIRECTORY WITHOUT CHANGES!
 # ----------------------------------------------------------------------------------------------------------------------
 
 from fileutils import abspath
